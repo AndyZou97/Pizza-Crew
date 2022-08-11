@@ -11,16 +11,17 @@ public class Item
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
     private long id;
+
     //@Column(name = "orderId")
     //private long orderId;
-    @Column(name = "item_name")
-    private String itemName;
+    @Column(name = "name")
+    private String name;
     @Column(name = "description")
     private String description;
     @Column(name = "price")
     private String price;
-    @Column(name = "url")
-    private String url;
+    @Column(name = "imageUrl")
+    private String imageUrl;
 
 
     public Item()
@@ -28,76 +29,54 @@ public class Item
 
     }
 
-    public Item(String itemName, String description, String price, String url)
+    public Item(String name, String description, String price, String imageUrl)
     {
-        this.itemName = itemName;
+        this.name = name;
         this.description = description;
         this.price = price;
-        this.url = url;
+        this.imageUrl = imageUrl;
     }
 
 
 
-    public long getId()
-    {
+    public long getId() {
         return id;
     }
 
-    public void setId(long id)
-    {
+    public void setId(long id) {
         this.id = id;
     }
-   /* public long getOrderId()
-    {
-        return orderId;
+
+    public String getName() {
+        return name;
     }
 
-    public void setOrderId(long orderId)
-    {
-        this.orderId = orderId;
-    }
-    */
-
-
-    public String getItemName()
-    {
-        return itemName;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public void setItemName(String itemName)
-    {
-        this.itemName = itemName;
-    }
-
-    public String getDescription()
-    {
+    public String getDescription() {
         return description;
     }
 
-    public void setDescription(String description)
-    {
+    public void setDescription(String description) {
         this.description = description;
     }
 
-    public String getPrice()
-    {
+    public String getPrice() {
         return price;
     }
 
-    public void setPrice(String price)
-    {
+    public void setPrice(String price) {
         this.price = price;
     }
 
-    public String getUrl()
-    {
-        return url;
+    public String getImageUrl() {
+        return imageUrl;
     }
 
-    public void setUrl(String url)
-    {
-        this.url = url;
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
     }
-
 
 }

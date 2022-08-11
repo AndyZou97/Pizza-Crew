@@ -29,19 +29,19 @@ public class ItemController {
     @Autowired
     private ItemRepository itemRepository;
     // get all employees
-    @GetMapping("/menu-items")
+    @GetMapping("/items")
     public List<Item> getAllMenuItems(){
         return itemRepository.findAll();
     }
 
     // create employee rest api
-    @PostMapping("/menu-items")
+    @PostMapping("/items")
     public Item createMenuItem(@RequestBody Item item) {
         return itemRepository.save(item);
     }
 
     // get employee by id rest api
-    @GetMapping("/menu-items/{id}")
+    @GetMapping("/items/{id}")
     public ResponseEntity<Item> getItemById(@PathVariable Long id) {
         Item item = itemRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("Menu Item not exist with id :" + id));
@@ -49,20 +49,20 @@ public class ItemController {
     }
 
     // update employee rest api
-    @PutMapping("/menu-items/{id}")
+    @PutMapping("/items/{id}")
     public ResponseEntity<Item> updateItem(@PathVariable Long id, @RequestBody Item itemDetails){
         Item item = itemRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("Menu item does not exist with id :" + id));
-        item.setItemName(itemDetails.getItemName());
+        item.setName(itemDetails.getName());
         item.setDescription(itemDetails.getDescription());
         item.setPrice(itemDetails.getPrice());
-        item.setUrl(itemDetails.getUrl());
+        item.setImageUrl(itemDetails.getImageUrl());
         Item updatedItem = itemRepository.save(item);
         return ResponseEntity.ok(updatedItem);
     }
 
     // delete employee rest api
-    @DeleteMapping("/menu-items/{id}")
+    @DeleteMapping("/items/{id}")
     public ResponseEntity<Map<String, Boolean>> deleteItem(@PathVariable Long id){
         Item item = itemRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("Menu Item does not exist with id :" + id));
