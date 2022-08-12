@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<div class="col-md-6 offset-md-3">
+    <h3> Create item </h3>
+    <form (ngSubmit) = "onSubmit()">
+    
+        <div class="form-group">
+            <label> Name</label>
+            <input type="text" class ="form-control" id = "name"
+                [(ngModel)] = "item.name" name = "name">
+        </div>
+    
+        <div class="form-group">
+            <label> Description</label>
+            <input type="text" class ="form-control" id = "description"
+                [(ngModel)] = "item.description" name = "description">
+        </div>
+    
+        <div class="form-group">
+            <label> Price</label>
+            <input type="text" class ="form-control" id = "price"
+                [(ngModel)] = "item.price" name = "price">
+        </div>
+        
+        <div class="form-group">
+            <label> Image URL </label>
+            <input type="text" class ="form-control" id = "imageUrl"
+                [(ngModel)] = "item.imageUrl" name = "imageUrl">
+        </div>
+    
+    
+        <button class = "btn btn-success" type ="submit">Submit</button>
+    
+    </form>
+
+    </div> 
+    
+</body>
+</html>
