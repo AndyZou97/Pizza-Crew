@@ -10,15 +10,15 @@ import { ItemService } from '../item.service';
 })
 export class ItemDetailsComponent implements OnInit {
 
-  item_id!: number
+  id!: number
   item!: Item
   constructor(private route: ActivatedRoute, private itemService: ItemService) { }
 
   ngOnInit(): void {
-    this.item_id = this.route.snapshot.params['item_id'];
+    this.id = this.route.snapshot.params['id'];
 
     this.item= new Item();
-    this.itemService.getItemById(this.item_id).subscribe( data => {
+    this.itemService.getItemById(this.id).subscribe( data => {
       this.item = data;
     });
   }
