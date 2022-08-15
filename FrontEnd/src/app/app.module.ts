@@ -8,7 +8,12 @@ import { CreateItemComponent } from './create-item/create-item.component';
 import { FormsModule } from '@angular/forms';
 import { UpdateItemComponent } from './update-item/update-item.component';
 import { ItemDetailsComponent } from './item-details/item-details.component';
+
 import { MainMenuComponent } from './main-menu/main-menu.component';
+
+import { ContactUsComponent } from './contact-us/contact-us.component';
+import { HomeComponent } from './home/home.component';
+
 
 @NgModule({
   declarations: [
@@ -17,7 +22,12 @@ import { MainMenuComponent } from './main-menu/main-menu.component';
     UpdateItemComponent,
     ItemDetailsComponent,
     CreateItemComponent,
+
     MainMenuComponent
+
+    ContactUsComponent,
+    HomeComponent
+
 
   ],
   imports: [
