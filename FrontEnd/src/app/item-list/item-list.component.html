@@ -1,23 +1,26 @@
-<h2 style = "text-align:center; background-color:red">Menu </h2>
-<table class="table table-striped center"  >
-
+<h2>Menu </h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Item ID</th>
+            <th>Item Name</th>
+            <th>Item Description</th>
+            <th>Item Price</th>
+            <th>Image</th>
+        </tr>
+    </thead>
     <tbody>
         <tr *ngFor="let item of items">
-            <td style="vertical-align:middle" ><font size = "+2">{{item.id}}</font>
-            <td style="width:30%"><b>{{item.name}}</b><br><br>{{item.description}}</td>
-
-            <td style ="vertical-align: middle"><font size="+3">{{item.price}}</font>
-            </td>
-    <td><a href="item.imageUrl">
-        <img src={{item.imageUrl}} alt="Pizza pic"
-    width= "100" height = "100"></a></td>
-            <td style = "width: 20%">
-                
+            <td>{{item.id}}</td>
+            <td>{{item.name}}</td>
+            <td>{{item.description}}</td>
+            <td>{{item.price}}</td>
+            <td>{{item.imageUrl}}</td>
+            <td>
                 <button (click) = "updateItem(item.id)" class = "btn btn-info"> Update </button>
                 <button (click) = "deleteItem(item.id)" class = "btn btn-danger" style = "margin-left:10px"> Delete </button>
-                <button (click) = "itemDetails(item.id)" class = "btn btn-success" style = "margin-top:10px; margin-left:50px" >View</button>
+                <button (click) = "itemDetails(item.id)" class = "btn btn-success" style = "margin-left:10px">View</button>
             </td>
-           
         </tr>
     </tbody>
 </table>
