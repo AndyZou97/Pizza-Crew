@@ -8,6 +8,8 @@ import { CreateItemComponent } from './create-item/create-item.component';
 import { FormsModule } from '@angular/forms';
 import { UpdateItemComponent } from './update-item/update-item.component';
 import { ItemDetailsComponent } from './item-details/item-details.component';
+import { CreateThankyouComponent } from './create-thankyou/create-thankyou.component';
+
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { ItemDetailsComponent } from './item-details/item-details.component';
     ItemListComponent,
     UpdateItemComponent,
     ItemDetailsComponent,
-    CreateItemComponent
+    CreateItemComponent,
+    CreateThankyouComponent,
+   
 
   ],
   imports: [
