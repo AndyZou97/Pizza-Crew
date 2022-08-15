@@ -21,7 +21,7 @@ import net.javaguides.project.exception.ResourceNotFoundException;
 import net.javaguides.project.model.Item;
 
 
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "http://localhost:50441")
 @RestController
 @RequestMapping("/api/v1/")
 public class ItemController {
