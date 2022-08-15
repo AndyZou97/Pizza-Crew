@@ -10,6 +10,9 @@ import { UpdateItemComponent } from './update-item/update-item.component';
 import { ItemDetailsComponent } from './item-details/item-details.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { HomeComponent } from './home/home.component';
+import { MenuComponent } from './menu/menu.component';
+import { CartComponent } from './cart/cart.component';
+
 
 @NgModule({
   declarations: [
@@ -19,8 +22,10 @@ import { HomeComponent } from './home/home.component';
     ItemDetailsComponent,
     CreateItemComponent,
     ContactUsComponent,
-    HomeComponent
-
+    HomeComponent,
+    MenuComponent,
+    CartComponent
+ 
   ],
   imports: [
     BrowserModule,
