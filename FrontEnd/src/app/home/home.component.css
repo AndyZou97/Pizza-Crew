@@ -10,6 +10,16 @@
   text-transform: capitalize;
   transition: all 0.2s linear;
 }
+banner {
+
+  
+  padding:60px 0;
+  text-align: center;
+  width: 30%;
+  height: 200px;
+  border: 5px dashed #f7a239;
+}
+
 
 html {
   font-size: 22.5%;

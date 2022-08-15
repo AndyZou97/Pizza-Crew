@@ -6,6 +6,8 @@ import { ItemListComponent } from './item-list/item-list.component';
 import { UpdateItemComponent } from './update-item/update-item.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { HomeComponent } from './home/home.component';
+import { CartComponent } from './cart/cart.component';
+import { MenuComponent } from './menu/menu.component';
 const routes: Routes = [
   {path: 'items',component:ItemListComponent},
   {path: '', redirectTo: 'items', pathMatch: 'full'},
@@ -13,7 +15,9 @@ const routes: Routes = [
   {path: 'update-item/:id', component: UpdateItemComponent},
   {path: 'item-details/:id', component: ItemDetailsComponent},
   {path: 'contact-us', component: ContactUsComponent},
-  {path: 'home', component: HomeComponent}
+  {path: 'home', component: HomeComponent},
+  {path: 'cart', component: CartComponent},
+  {path: 'menu', component: MenuComponent}
 ];
 
 @NgModule({
