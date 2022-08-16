@@ -41,4 +41,8 @@ export class ItemListComponent implements OnInit {
 
   }
 
+  goToCreateItem(){
+    this.router.navigate(['create-item'])
+  }
+
 }

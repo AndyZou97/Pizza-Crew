@@ -8,16 +8,18 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 import { HomeComponent } from './home/home.component';
 import { CartComponent } from './cart/cart.component';
 import { MenuComponent } from './menu/menu.component';
+import { CreateThankyouComponent } from './create-thankyou/create-thankyou.component';
 const routes: Routes = [
   {path: 'items',component:ItemListComponent},
-  {path: '', redirectTo: 'items', pathMatch: 'full'},
+  {path: '', redirectTo: 'home', pathMatch: 'full'},
   {path: 'create-item', component:CreateItemComponent},
   {path: 'update-item/:id', component: UpdateItemComponent},
   {path: 'item-details/:id', component: ItemDetailsComponent},
   {path: 'contact-us', component: ContactUsComponent},
   {path: 'home', component: HomeComponent},
   {path: 'cart', component: CartComponent},
-  {path: 'menu', component: MenuComponent}
+  {path: 'menu', component: MenuComponent},
+  {path: 'thankyou', component: CreateThankyouComponent}
 ];
 
 @NgModule({
