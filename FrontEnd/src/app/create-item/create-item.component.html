@@ -8,34 +8,34 @@
 </head>
 <body>
 
-<div class="col-md-6 offset-md-3">
-    <h3> Create item </h3>
+<h2 style = "text-align:center; background-color: #6fdc6f">Create Item </h2>
+<div class="col-md-6 offset-md-5">
     <form (ngSubmit) = "onSubmit()">
     
         <div class="form-group">
-            <label> Name</label>
+            <label> Item Name</label>
             <input type="text" class ="form-control" id = "name"
                 [(ngModel)] = "item.name" name = "name">
         </div>
-    
+        
         <div class="form-group">
-            <label> Description</label>
-            <input type="text" class ="form-control" id = "description"
-                [(ngModel)] = "item.description" name = "description">
-        </div>
-    
-        <div class="form-group">
-            <label> Price</label>
+            <label> Item Price</label>
             <input type="text" class ="form-control" id = "price"
                 [(ngModel)] = "item.price" name = "price">
         </div>
-        
+
         <div class="form-group">
             <label> Image URL </label>
             <input type="text" class ="form-control" id = "imageUrl"
                 [(ngModel)] = "item.imageUrl" name = "imageUrl">
         </div>
+        
     
+        <div class="form-group">
+            <label> Item Description</label>
+            <textarea class ="form-control" id = "description"
+                [(ngModel)] = "item.description" name = "description"></textarea>
+        </div>
     
         <button class = "btn btn-success" type ="submit">Submit</button>
     
@@ -45,3 +45,10 @@
     
 </body>
 </html>
+
+<footer class = "footer">
+    <div class = "nav-item">
+        @2022 PizzaCrew All rights reserved.
+    </div>
+    
+</footer>

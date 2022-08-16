@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Item } from '../item';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ItemService } from '../item.service';
 
 @Component({
@@ -12,7 +12,7 @@ export class ItemDetailsComponent implements OnInit {
 
   id!: number
   item!: Item
-  constructor(private route: ActivatedRoute, private itemService: ItemService) { }
+  constructor(private route: ActivatedRoute, private itemService: ItemService, private router:Router) { }
 
   ngOnInit(): void {
     this.id = this.route.snapshot.params['id'];
@@ -21,6 +21,9 @@ export class ItemDetailsComponent implements OnInit {
     this.itemService.getItemById(this.id).subscribe( data => {
       this.item = data;
     });
+  }
+  goToItemList(){
+    this.router.navigate(['items'])
   }
 
 }

@@ -42,6 +42,10 @@ export class MenuComponent implements OnInit {
   
     }
 
+    goToThankYou(){
+      this.router.navigate(['thankyou'])
+    }
+
  
 
 }
