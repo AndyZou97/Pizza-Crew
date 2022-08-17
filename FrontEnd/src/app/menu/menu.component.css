@@ -11,12 +11,13 @@
     height: 100px;
     background-color: #000000;
     z-index: 10;
-    margin-top: 100px;
-    position: relative;
+    position: fixed;
+    bottom: 0;
     clear: both;
-    position: relative;
     color: white;
   }
+
+  
 
   .btn-primary{
     margin-left:1200px;
